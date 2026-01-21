@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galleria d'arte</title>
+
+<!-- Font elegante -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+nav a {
+  margin-left: 30px;
+  color: #ccc;
+  font-weight: 400;
+}
+nav a:hover { color: #fff; }
+
+/* HOMEPAGE HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #0f0f0f, #141414);
+}
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* GRID OPERE */
+.gallery {
+  padding: 80px 60px;
+}
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+.card {
+  background: #141414;
+  overflow: hidden;
+  border: 1px solid #1f1f1f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; display: block; }
+.card h3 { font-size: 18px; margin: 15px; font-weight: 600; }
+.card p { margin: 0 15px 15px 15px; color: #aaa; font-size: 14px; }
+
+/* BOTTONE ACQUISTA */
+.btn-buy {
+  display: block;
+  margin: 15px;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn-buy:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 60px;
+  border-top: 1px solid #222;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  header, .gallery, footer { padding: 20px; }
+  .hero h1 { font-size: 40px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">Galleria d'arte</div>
+  <nav>
+    <a href="#gallery">Opere</a>
+    <a href="#contact">Contatti</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Ogni pezzo è un'opera</h1>
+    <p>Scopri la collezione iconica di capi unici</p>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>Collezione</h2>
+  <div class="grid">
+    <!-- PEZZO 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x500/556b2f/ffffff?text=Jeans+Militare" alt="Jeans Militari">
+      <h3>Jeans Militari</h3>
+      <p>Baggy con dettagli militari e verde militare esterno. Puro concetto di struttura e forza.</p>
+      <a href="#" class="btn-buy">Acquista</a>
+    </div>
+
+    <!-- PEZZO 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x500/333333/ffffff?text=Jeans+Doppio" alt="Jeans Doppio">
+      <h3>Jeans Doppio</h3>
+      <p>Due jeans in uno, aperto sopra e chiuso sotto, contrasto nero e grigio. Design concettuale unico.</p>
+      <a href="#" class="btn-buy">Acquista</a>
+    </div>
+
+    <!-- PEZZO 3 → aggiungi altri pezzi qui -->
+  </div>
+</section>
+
+<footer>
+  © 2026 Galleria d'arte — Tutti i diritti riservati
+</footer>
+
+</body>
+</html>
+<section class="gallery" id="contact" style="background: #1a1a1a;">
+  <h2>Contatti</h2>
+  <p style="text-align: center; color: #aaa;">Vuoi un pezzo personalizzato o maggiori informazioni?</p>
+  <div style="text-align: center; margin-top: 30px;">
+    <p>Email: <a href="mailto:tuaemail@esempio.com" style="color: #fff;">tuaemail@esempio.com</a></p>
+    <p>Instagram: <a href="#" style="color: #fff;">@tuo_profilo</a></p>
+  </div>
+</section>
